@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <title>我的網誌｜Michelle Yu</title>
+  <title>金聰明部落格｜Michelle Yu</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
@@ -30,6 +29,10 @@
       color: #006699;
       margin-left: 20px;
       font-weight: bold;
+    }
+    nav a.active {
+      color: #222;
+      border-bottom: 2px solid #006699;
     }
     .container {
       max-width: 960px;
@@ -63,19 +66,19 @@
 <body>
 
   <header>
-    <nav>
+    <nav aria-label="主導航">
       <div><strong>Michelle Yu</strong></div>
       <div>
         <a href="index.html">首頁</a>
         <a href="about.html">關於我</a>
         <a href="portfolio.html">作品集</a>
-        <a href="blog.html">我的網誌</a>
+        <a href="blog.html" class="active">我的網誌</a>
         <a href="contact.html">聯絡我</a>
       </div>
     </nav>
   </header>
 
-  <div class="container">
+  <main class="container">
     <h1>金聰明部落格</h1>
 
     <div class="blog-entry">
@@ -84,29 +87,28 @@
       <p>今天幫準備上高職的孩子上課，...</p>
       <a class="read-more" href="20250608-teach.html">閱讀更多</a>
     </div>
-  
-<div class="blog-entry">
-  <h2>2025.06.08 我決定不教書了</h2>
-  <p>[文長 / 分享文]</p>
-  <p>應該說我決定不做招生這一塊了，想要上我的課還是可以報名的，...</p>
-  <a class="read-more" href="20250608.html">閱讀更多</a>
-</div>
 
- <div class="blog-entry">
+    <div class="blog-entry">
+      <h2>2025.06.08 我決定不教書了</h2>
+      <p>[文長 / 分享文]</p>
+      <p>應該說我決定不做招生這一塊了，想要上我的課還是可以報名的，...</p>
+      <a class="read-more" href="20250608.html">閱讀更多</a>
+    </div>
+
+    <div class="blog-entry">
       <h2>2025.06.07 進擊的Michelle - 篩選家長篇</h2>
       <p>[文長 / 分享文]</p>
       <p>是的，不是只有家長選老師，我們老師也會篩選家長。</p>
       <a class="read-more" href="20250607.html">閱讀更多</a>
     </div>
 
- <div class="blog-entry">
+    <div class="blog-entry">
       <h2>2025.05.29 進擊的Michelle - 雷家長案例分享2</h2>
       <p>[文長 / 分享文]</p>
       <p>承上篇內容，當媽媽跟小編抱怨我上課在聊天的時候，我真的非常無語...</p>
       <a class="read-more" href="20250529.html">閱讀更多</a>
     </div>
-    
-  </div>
+  </main>
 
 </body>
 </html>
