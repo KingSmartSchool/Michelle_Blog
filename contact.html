@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>聯絡我｜Michelle Yu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      max-width: 960px;
+      margin: auto;
+    }
+    nav a {
+      text-decoration: none;
+      color: #006699;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      color: #006699;
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .contact-info a {
+      color: #006699;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    form button {
+      background-color: #006699;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: #005077;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div><strong>Michelle Yu</strong></div>
+    <div>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我</a>
+      <a href="portfolio.html">作品集</a>
+      <a href="love.html">我喜歡的事</a>
+      <a href="contact.html">聯絡我</a>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>聯絡我</h1>
+  <p>如果你對我的作品感興趣、希望合作、或只是想聊聊關於語言教學與 AI 的事，歡迎隨時聯繫我！😊</p>
+
+  <div class="contact-info">
+    <a href="mailto:youremail@example.com">📧 Email：youremail@example.com</a>
+    <a href="https://line.me/ti/p/你的LINE-ID" target="_blank">💬 LINE：@你的LINE-ID</a>
+    <a href="https://www.instagram.com/你的IG/" target="_blank">📸 Instagram</a>
+  </div>
+
+  <h2>或直接留言：</h2>
+  <form action="https://formspree.io/f/你的FormID" method="POST">
+    <input type="text" name="name" placeholder="你的名字" required>
+    <input type="email" name="email" placeholder="你的Email" required>
+    <textarea name="message" rows="5" placeholder="請留下訊息..." required></textarea>
+    <button type="submit">送出留言</button>
+  </form>
+</div>
+
+</body>
+</html>
