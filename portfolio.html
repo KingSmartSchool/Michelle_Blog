@@ -37,7 +37,23 @@
     h1 {
       font-size: 2em;
       color: #006699;
+      margin-bottom: 20px;
+    }
+    .filter-buttons {
       margin-bottom: 30px;
+      text-align: center;
+    }
+    .filter-buttons button {
+      margin: 5px;
+      padding: 8px 15px;
+      background-color: #e0f0ff;
+      color: #006699;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .filter-buttons button:hover {
+      background-color: #b9e0ff;
     }
     .project-grid {
       display: grid;
@@ -48,61 +64,94 @@
       background-color: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      padding: 20px;
+      padding: 10px;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
     }
     .card h2 {
-      font-size: 1.2em;
+      font-size: 1.1em;
       color: #006699;
-      margin-bottom: 10px;
+      margin: 10px 0 5px;
     }
     .card p {
-      font-size: 0.95em;
-      margin-bottom: 15px;
+      font-size: 0.9em;
+      margin-bottom: 10px;
     }
     .card a {
       display: inline-block;
-      padding: 8px 12px;
+      padding: 6px 12px;
       background-color: #006699;
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
-      font-size: 0.9em;
+      font-size: 0.85em;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <nav>
-      <div><strong>Michelle Yu</strong></div>
-      <div>
-        <a href="index.html">首頁</a>
-        <a href="about.html">關於我</a>
-        <a href="portfolio.html">作品集</a>
-        <a href="love.html">我喜歡的事</a>
-        <a href="contact.html">聯絡我</a>
-      </div>
-    </nav>
-  </header>
-
-  <div class="container">
-    <h1>AI 作品集</h1>
-    <div class="project-grid">
-
-      <div class="card">
-        <h2>自然發音拉霸機</h2>
-        <p>結合 AI 與互動式遊戲設計，讓孩子們以趣味方式練習自然發音。</p>
-        <a href="https://kingsmartschool.github.io/Phonics-Slot-Machine/" target="_blank">立即遊玩</a>
-      </div>
-
-      <div class="card">
-        <h2>國中刷題神器</h2>
-        <p>一款結合 ChatGPT 的線上刷題工具，幫助國中生快速練習會考英文題型。</p>
-        <a href="https://kingsmartschool.github.io/KingSmart-JuniorHigh/" target="_blank">開始刷題</a>
-      </div>
-
+<header>
+  <nav>
+    <div><strong>Michelle Yu</strong></div>
+    <div>
+      <a href="index.html">首頁</a>
+      <a href="about.html">關於我</a>
+      <a href="portfolio.html">作品集</a>
+      <a href="love.html">我喜歡的事</a>
+      <a href="contact.html">聯絡我</a>
     </div>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>AI 作品集</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterProjects('all')">所有</button>
+    <button onclick="filterProjects('遊戲')">遊戲</button>
+    <button onclick="filterProjects('教學工具')">教學工具</button>
+    <button onclick="filterProjects('網站設計')">網站設計</button>
+    <button onclick="filterProjects('教學影片')">教學影片</button>
+    <button onclick="filterProjects('其他')">其他</button>
   </div>
+
+  <div class="project-grid" id="projectGrid">
+
+    <div class="card" data-category="遊戲">
+      <img src="phonics slot.png" alt="自然發音拉霸機">
+      <h2>自然發音拉霸機</h2>
+      <p>結合 AI 與互動式遊戲設計，讓孩子們以趣味方式練習自然發音。</p>
+      <a href="https://kingsmartschool.github.io/Phonics-Slot-Machine/" target="_blank">立即遊玩</a>
+    </div>
+
+    <div class="card" data-category="教學工具">
+      <img src="Junior high.png" alt="國中刷題神器">
+      <h2>國中刷題神器</h2>
+      <p>一款結合 ChatGPT 的線上刷題工具，幫助國中生快速練習會考英文題型。</p>
+      <a href="https://kingsmartschool.github.io/KingSmart-JuniorHigh/" target="_blank">開始刷題</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function filterProjects(category) {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      if (category === 'all' || card.getAttribute('data-category') === category) {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
