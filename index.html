@@ -2,64 +2,110 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>關於我 - Michelle Yu</title>
+  <title>Michelle Yu｜個人網站</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      padding: 40px;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #f0f8ff;
       color: #333;
-    }
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .image {
-      flex: 1 1 300px;
-      text-align: center;
-    }
-    .image img {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-    .text {
-      flex: 2 1 400px;
-      padding-left: 30px;
-    }
-    h1 {
-      color: #006699;
-    }
-    p {
       line-height: 1.6;
     }
+    header {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 960px;
+      margin: auto;
+    }
+    nav a {
+      text-decoration: none;
+      color: #006699;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+    .hero img {
+      max-width: 300px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .hero-text {
+      flex: 1 1 400px;
+      padding: 0 20px;
+    }
+    .hero-text h1 {
+      font-size: 2em;
+      color: #006699;
+      margin-bottom: 10px;
+    }
+    .hero-text p {
+      margin-bottom: 10px;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #006699;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+    }
     @media (max-width: 768px) {
-      .container {
+      .hero {
         flex-direction: column;
+        text-align: center;
       }
-      .text {
-        padding-left: 0;
+      nav {
+        flex-direction: column;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="image">
-      <img src="me-anime.png" alt="Michelle Yu anime style">
+
+  <header>
+    <nav>
+      <div><strong>Michelle Yu</strong></div>
+      <div>
+        <a href="about.html">關於我</a>
+        <a href="portfolio.html">作品集</a>
+        <a href="love.html">我喜歡的事</a>
+        <a href="contact.html">聯絡我</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="me-anime.png" alt="Michelle Yu anime style">
+    <div class="hero-text">
+      <h1>嗨，我是 Michelle Yu</h1>
+      <p>線上英語老師、AI 教學實驗者、數位創作愛好者。</p>
+      <p>我喜歡探索 AI 工具、語言、文化與個人成長的無限可能。</p>
+      <a href="about.html" class="cta">認識我更多 →</a>
     </div>
-    <div class="text">
-      <h1>哈囉，我是 Michelle Yu</h1>
-      <p>我是一名線上英語老師，擁有超過 10 年的教學經驗。</p>
-      <p>這幾年，我開始深入探索 AI 工具，並將它們結合於英語教學與數位創作。</p>
-      <p>這個網站是我的個人空間，記錄我的學習、旅行、創作與分享。</p>
-      <p>歡迎你一起探索更多精彩內容！</p>
-    </div>
-  </div>
+  </section>
+
 </body>
 </html>
